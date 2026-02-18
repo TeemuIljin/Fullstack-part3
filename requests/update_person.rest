@@ -1,0 +1,8 @@
+# Replace :id with a real id from GET /api/persons
+PUT http://localhost:3001/api/persons/:id
+Content-Type: application/json
+
+{
+  "name": "Updated Name",
+  "number": "040-9998877"
+}

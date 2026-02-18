@@ -1,0 +1,2 @@
+# Replace :id with a real id from GET /api/persons
+GET http://localhost:3001/api/persons/:id
