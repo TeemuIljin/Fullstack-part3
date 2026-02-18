@@ -4,8 +4,11 @@ Backend for the Fullstack Open Part 3 phonebook application.
 
 ## Setup (MongoDB)
 
-1. Create a MongoDB database (e.g. [MongoDB Atlas](https://www.mongodb.com/atlas)).
-2. Copy `.env.example` to `.env` and set `MONGODB_URI` (and optionally `PORT`). Do not commit `.env`.
+**Local MongoDB:** Install [MongoDB Community](https://www.mongodb.com/try/download/community) and start it, then copy `.env.example` to `.env` (uses `mongodb://localhost:27017/phonebook` by default).
+
+**Atlas (cloud):** Create a cluster at [MongoDB Atlas](https://www.mongodb.com/atlas), then set `MONGODB_URI` in `.env` to your connection string.
+
+Do not commit `.env`.
 
 ## Running locally
 
@@ -14,10 +17,10 @@ Backend for the Fullstack Open Part 3 phonebook application.
 
 ## Command-line database (3.12)
 
-- List all entries: `node mongo.js <password>`
-- Add an entry: `node mongo.js <password> <name> <number>`
-  Example: `node mongo.js yourpassword "Arto Vihavainen" 045-1232456`
-  Do not commit the password; use a `.env` with `MONGODB_URI` or pass the password as argument.
+With `MONGODB_URI` in `.env` (e.g. local: `mongodb://localhost:27017/phonebook`):
+
+- List all: `node mongo.js local` (use any word for local DB)
+- Add one: `node mongo.js local "Arto Vihavainen" 045-1232456`
 
 ## API
 
